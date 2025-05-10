@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "scripts": {
-    "build": "node esbuild.config.js && copyfiles -f release/html/index.html preview/html/index.html"
+    "build": "node esbuild.config.js && copyfiles -f release/html/index.html preview/html && copyfiles -f release/img/* preview/img && copyfiles -f release/css/* preview/css"
   },
   "main": "esbuild.config.js",
   "keywords": [],
