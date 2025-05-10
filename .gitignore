@@ -1,0 +1,29 @@
+# Node.js 관련
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 빌드 출력 폴더 (필요한 경우만)
+dist/
+preview/
+
+# OS별 불필요 파일
+.DS_Store        # macOS
+Thumbs.db        # Windows
+ehthumbs.db      # Windows
+
+# 에디터/IDE 관련
+.vscode/
+.idea/
+
+# 환경 설정
+.env
+.env.local
+.env.*.local
+
+# 압축 파일 (배포용 zip 만들 경우)
+*.zip
+
+# 기타 잠재적 불필요 파일
+*.log
