@@ -5,7 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # 빌드 출력 폴더 (필요한 경우만)
-dist/
+# dist/
 preview/
 
 # OS별 불필요 파일
