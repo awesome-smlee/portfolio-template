@@ -1,0 +1,192 @@
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+*/
+
+:root {
+  --bg-color: #fff;
+  --text-color: #333;
+  --gray: #9b9b9b;
+  /* --section1-bg: #a1ff0b1f;
+  --section2-bg: #4a4dff3b;
+  --section3-bg: #f79dbb2d; */
+}
+
+[data-theme="dark"] {
+  --bg-color: #1c1c1c;
+  --text-color: #fff;
+  --gray: #fff;
+  /* --section1-bg: #4f660026;
+  --section2-bg: #2e3cff33;
+  --section3-bg: #82374f33; */
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* #section1 { background: var(--section1-bg); }
+#section2 { background: var(--section2-bg); }
+#section3 { background: var(--section3-bg); } */
+
+#modeToggle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 20;
+  font-size: 1.3rem;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+/* ================================================ */
+
+/* 공통 */
+.img-box {
+  height: 300px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* scrollTopBtn */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 21;
+  transition: opacity 0.3s;
+}
+
+/* show 추가되면 활성화 */
+#scrollTopBtn.show {
+  display: block;
+}
+
+/*************************************
+    header
+*************************************/
+header {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  margin: 0;
+}
+
+header.fixed {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  gap: 60px;
+  transition: all 0.3s;
+  z-index: 20;
+}
+
+header.fixed .logo {
+  display: none;
+}
+
+/*************************************
+    content
+*************************************/
+/* section1 */
+
+.profile-wrap {
+  display: flex; 
+  gap: 50px; 
+  justify-content: space-between;
+}
+
+.profile-wrap .img-box {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+/* timeline */
+.timeline {
+  
+}
+
+.timeline li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 6px;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.timeline strong {
+  color: initial;
+  display: inline-block;
+  width: 240px;
+  font-weight: 700;
+}
+
+.timeline span {
+  flex: 1;
+}
+
+/* project-list */
+.project-list {
+  display: flex;
+  gap: 20px;
+}
+
+.project-list li {
+  flex: 1;
+}
+
+.project-list li .img-box {
+  border-radius: 5px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.project-list li .img-box img {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project-list li:hover .img-box img {
+  transform: scale(1.2);
+}
+
+
+/*************************************
+    footer
+*************************************/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #747474;
+}

@@ -3,12 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <title>개발자 포트폴리오</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://hongildong.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="홍길동 포트폴리오">
+    <!-- <meta property="og:image" content="/img/icon/lemon.png"> 경로추가-->
+    <meta property="og:description" content="홀길동 포트폴리오">
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <!-- icon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="/release/css/reset.css">
+    <link rel="stylesheet" href="/release/css/style.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/release/js/script.js"></script>
+    <title>홍길동 개발자 포트폴리오</title>
   </head>
   <body>
-    <h1>안녕하세요!</h1>
-    <img src="assets/profile.png" alt="프로필 이미지" />
-    <p>안녕하세요, 저는 개발자입니다.</p>
-    <script src="/release/js/script.js"></script>
+    <div class="intro" style="display: none;">
+      <h1>환영합니다!</h1>
+      <p>포트폴리오에 오신 걸 환영해요 🖐</p>
+    </div>
+
+    <button id="modeToggle">🌙</button>
+
+    <!-- header -->
+    <header>
+      <p class="logo">홍길동 포트폴리오</p>
+      <nav>
+        <a href="#section1">소개</a>
+        <a href="#section2">PROJECT</a>
+        <a href="#section3">CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- content -->
+    <div class="content" style="display: block;">
+      <main>
+        <section id="section1" class="section1">
+          <article class="ani">
+            <h1>저를 소개합니다!</h1>
+            <div class="profile-wrap">
+              <div>
+                <div class="img-box">
+                  <img src="/img/profile.jpg" alt="프로필 이미지">
+                </div>
+                <p class="text1">안녕하세요, 저는 책임감이 강한 홍길동 풀스택 개발자입니다.</p>
+              </div>
+              <div>
+                <h2>Skill set</h2>
+                <ul class="timeline">
+                  <li>
+                    <strong>Languages</strong>
+                    <span>java, JavaScript(ES6), HTML5, CSS3, React</span>
+                  </li>
+                  <li>
+                    <strong>Framework / Library</strong>
+                    <span>Spring, Node.js, jQuery, Bootstrap</span>
+                  </li>
+                  <li>
+                    <strong>Server</strong>
+                    <span>Apache Tomcat</span>
+                  </li>
+                  <li>
+                    <strong>Tools</strong>
+                    <span>AWS, Eclipse, SQL Developer, VS Code, Redmine, Obsidian, Figma, Photoshop,
+                      Illustrator</span>
+                  </li>
+                  <li>
+                    <strong>Environment</strong>
+                    <span>Windows</span>
+                  </li>
+                  <li>
+                    <strong>Management</strong>
+                    <span>SVN, GitHub, Redmine, Flow, ERD-Cloud, Star UML</span>
+                  </li>
+                  <li>
+                    <strong>DB</strong>
+                    <span>Oracle, MySQL, MariaDB, PostgreSQL</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="ani">
+
+          </article>
+
+          <article class="ani">
+            <h2>교육 및 대외활동</h2>
+            <div>
+              <img src="/img/sample.jpg" alt="교육 및 대외활동 이미지">
+            </div>
+            <ul class="timeline">
+              <li>
+                <span class="date">2023.09 ~ 2024.04</span>
+                <span class="tit">풀-스택 개발자 양성과정 수료 / 홍길동개발원</span>
+                <p class="txt">그룹웨어 [그룹웨어 이름] 개발</p>
+              </li>
+              <li>
+                <span class="date">2024.01.27</span>
+                <span class="tit">개발 컨퍼런스 참여 / 대전 데브콘</span>
+                <p class="txt">알고리즘 코딩테스트, 스프링에서 테스트 코드 작성하기 등 실무 개발자들의 진솔한 경험담을 바탕으로 인사이트 및
+                  지식 습득</p>
+              </li>
+              <li>
+                <span class="date">2015.03 ~ 2018.02</span>
+                <span class="tit">홍길동대학교 - 컴퓨터공학과 전공</span>
+                <p class="txt">전공학점(3.0/4.5)</p>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ani">
+            <h2>자격증</h2>
+            <ul class="timeline">
+              <li>
+                <span class="date">2024.01.27</span>
+                <span class="company">정보처리기사</span>
+              </li>
+              <li>
+                <span class="date">2024.01.27</span>
+                <span class="company">SQLD</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ani">
+            <h2>강점</h2>
+            <ul class="timeline">
+              <li>
+                <span class="company">책임감</span>
+                <p class="company-txt">주어진 업무에 대한 책임감을 가지고 최선을 다해 수행합니다.</p>
+              </li>
+              <li>
+                <span class="company">소통</span>
+                <p class="company-txt">팀원들과의 원활한 소통을 통해 협업을 중요시합니다.</p>
+              </li>
+              <li>
+                <span class="company">문제 해결 능력</span>
+                <p class="company-txt">문제를 분석하고 해결책을 제시하는 능력을 가지고 있습니다.</p>
+              </li>
+              <li>
+                <span class="company">학습 능력</span>
+                <p class="company-txt">새로운 기술과 도구를 빠르게 학습하고 적용할 수 있습니다.</p>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="section2">
+          <h1>프로젝트</h1>
+          <!-- <p class="text1">추가로 쓰고 싶은 내용 작성하세요.</p> -->
+          <ul class="project-list ani">
+            <li>
+              <div class="img-box">
+                <img src="/img/sample.jpg" alt="교육 및 대외활동 이미지">
+              </div>
+              <h3>프로젝트 이름</h3>
+            </li>
+            <li>
+              <div class="img-box">
+                <img src="/img/sample.jpg" alt="교육 및 대외활동 이미지">
+              </div>
+              <h3>프로젝트 이름</h3>
+            </li>
+            <li>
+              <div class="img-box">
+                <img src="/img/sample.jpg" alt="교육 및 대외활동 이미지">
+              </div>
+              <h3>프로젝트 이름</h3>
+            </li>
+          </ul>
+        </section>
+
+        <section id="section3" class="ani">
+          <article class="ani">
+            <div style="height: 400px; background: #eee;">배경 고정</div>
+          </article>
+          <article class="ani">
+            <h1>믿고 맡길 수 있는 개발자 OOO 입니다!</h1>
+            <p>연락처: 010-1234-5678</p>
+            <p>주소 : 서울시 ㅇㅇ구</p>
+            <p>Email: dev@example.com</p>
+            <p>GitHub: </p>
+            <p>LinkedIn: </p>
+            <p>MBTI: ISTJ</p>
+          </article>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <p>2025 MyPortfolio Copyright © 홍길동 Corp. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <button id="scrollTopBtn">⬆️</button>
   </body>
 </html>
